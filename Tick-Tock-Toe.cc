@@ -15,16 +15,16 @@ void SpaceOutput(int intRowNumber, int intBoardSize);
 void Yaxis(int intBoardSize);
 void SolidLine(int intBoardSize, char chrBoard);
 void VerticalLineSegment(int intBoardSize, int intRowNumber, char chrBoard,
-       apvector< apmatrix<char> > Board, int intBoardNumber);
+      	apvector< apmatrix<char> > Board, int intBoardNumber);
 void BoardConstruction(char chrBoard, int intBoardSize, apvector< apmatrix<char> > Board);
 void PlayerTurn(apvector< apmatrix<char> > &Board, int &intSpacesUsed, char &chrTurn, 
-  int intBoardSize, apstring strPlayer1, apstring strPlayer2, time_t EndTime, bool &TimeOut);
+  	int intBoardSize, apstring strPlayer1, apstring strPlayer2, time_t EndTime, bool &TimeOut);
 int CollectValue(apstring Type, int intBoardSize);
 void ChainReaction(apvector < apmatrix<char> > &Board , char &chrTurn, int intBoardSize,
-   int intSpacesUsed);
+   	int intSpacesUsed);
 void ChainReactionCreation(apvector < apmatrix<char> > &Board, int intBoardSize);
 int CheckWin(apvector< apmatrix<char> > Board, int intBoardSize, char chrWinCharacter, 
-  int intSpacesUsed);
+  	int intSpacesUsed);
 void StartScreen();
 int CollectBoardSize();
 char CollectBoardCharacter();
@@ -106,12 +106,12 @@ int CollectBoardSize()
     //Declarations 
     int intBoardSize; 
  
-  cout << "\n\nPlease enter your desired board size. WARNING: board sizes greater than 5 are "
+  	cout << "\n\nPlease enter your desired board size. WARNING: board sizes greater than 5 are "
     << "extremely slow and challenging to play. Some patience is required. ";
     while (!(std::cin >> intBoardSize) || intBoardSize < 0 || intBoardSize > 9) 
       //If the number is less than 0 or greater than 9
     {
-        cout << "Please enter an integer number between 1 and 9: "; //Ask the user to enter a new number  
+        cout << "Please enter an integer number between 1 and 9: "; //Ask the user to enter a new 		number  
         cin.clear();  //Clear current value  
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //Ignore current value                 
     } //Loop is terminated once a valid value is collected
